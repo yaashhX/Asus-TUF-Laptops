@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASUS TUF Gaming Laptop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <img
+          src="{{ url_for('static', filename='images/tuf-logo.svg') }}"
+          alt="ASUS TUF Gaming Logo"
+          class="logo"
+        />
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <h1>Unleash Your Power with ASUS TUF Gaming</h1>
+          <p>Engineered for performance, built for durability.</p>
+          <form id="form" action="mailto:yk5505564@gmail.com" method="post" enctype="text/plain">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit" id="submit" class="btn-primary">Get Started</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container features-container">
+          <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/performance_img.webp') }}" alt="" class="icon">
+            <h2>High-Performance Hardware</h2>
+            <p>
+              Powered by Intel Core i9 and NVIDIA GeForce RTX 4070, the TUF series
+              redefines gaming performance.
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/battery-life.jpg') }}" alt="" class="icon">
+            <h2>Long Battery Life</h2>
+            <p>
+              Stay powered for hours with efficient cooling and energy-optimized architecture.
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/military-grade.png') }}" alt="" class="icon">
+            <h2>Military-Grade Durability</h2>
+            <p>
+              TUF laptops meet MIL-STD-810H standards to endure heat, shock, and vibration.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section">
+        <div class="container">
+          <h2>How It Works</h2>
+          <div class="video-wrapper">
+            <iframe
+              id="video"
+              src="https://www.youtube.com/embed/EEwDOMs5Xio"
+              title="ASUS TUF Gaming Video"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section">
+        <div class="container pricing-container">
+          <div class="product-card">
+            <h3 class="level">Basic Model</h3>
+            <h2>$1,299</h2>
+            <ul>
+              <li>Intel Core i7 Processor</li>
+              <li>NVIDIA RTX 3060 GPU</li>
+              <li>16GB RAM / 512GB SSD</li>
+              <li>15.6" Full HD Display</li>
+            </ul>
+            <button class="btn-primary">Select</button>
+          </div>
+
+          <div class="product-card highlight">
+            <h3 class="level">Advanced Model</h3>
+            <h2>$1,799</h2>
+            <ul>
+              <li>Intel Core i9 Processor</li>
+              <li>NVIDIA RTX 4070 GPU</li>
+              <li>32GB RAM / 1TB SSD</li>
+              <li>15.6" 144Hz Full HD Display</li>
+            </ul>
+            <button class="btn-primary">Select</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="container">
+          <h2>Gallery</h2>
+          <div class="gallery-grid">
+            <img src="{{ url_for('static', filename='images/performance1.webp') }}" alt="ASUS TUF Hero Image">
+            <img src="{{ url_for('static', filename='images/laptop-design.jpg') }}" alt="ASUS TUF Design">
+            <img src="{{ url_for('static', filename='images/laptop-performance.jpeg') }}" alt="ASUS TUF Performance">
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <form action="mailto:yk5505564@gmail.com" method="POST" class="contact-form">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn-primary">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+        <p>© 2025 ASUS TUF Gaming. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

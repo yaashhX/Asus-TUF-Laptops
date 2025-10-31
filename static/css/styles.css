@@ -1,0 +1,290 @@
+/* ===== Root Variables (Red–Black Dynamic Theme) ===== */
+:root {
+  --bg-color: #0a0a0a;
+  --surface: #1a0000;
+  --accent: #e50914; /* Netflix-style red */
+  --accent-glow: rgba(229, 9, 20, 0.4);
+  --text-light: #f4f4f4;
+  --text-muted: #999;
+  --font-main: 'Poppins', sans-serif;
+  --transition: 0.3s ease;
+}
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== Header ===== */
+.header {
+  background: rgba(10, 0, 0, 0.95);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #330000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  width: 160px;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-bar a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-bar a:hover {
+  color: var(--accent);
+}
+
+/* ===== Hero ===== */
+#hero {
+  background: linear-gradient(180deg, #200000 0%, #000 100%);
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+#hero input[type="email"] {
+  padding: 0.8rem 1rem;
+  border: 1px solid #330000;
+  border-radius: 5px;
+  background: #1a0000;
+  color: var(--text-light);
+  width: 300px;
+  margin-right: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 5rem 2rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Features ===== */
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.feature-card .icon {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h2 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Video ===== */
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ===== Pricing ===== */
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: var(--surface);
+  border: 1px solid #330000;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card.highlight {
+  border-color: var(--accent);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.product-card h3 {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.product-card ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.product-card li {
+  padding: 0.3rem 0;
+  color: var(--text-muted);
+}
+
+/* ===== Gallery ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  border-radius: 10px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* ===== Contact ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-form input {
+  width: 300px;
+  padding: 0.8rem;
+  border: 1px solid #330000;
+  border-radius: 5px;
+  background: #1a0000;
+  color: var(--text-light);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0d0000;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #330000;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+footer p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+  .btn-primary, #hero input[type="email"] {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
